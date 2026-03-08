@@ -1,0 +1,96 @@
+[gd_scene format=3 uid="uid://ch6gai00x0ov1"]
+
+[ext_resource type="Script" uid="uid://cdthctubgwa4w" path="res://scripts/main_menu.gd" id="1_l6cm7"]
+[ext_resource type="Script" uid="uid://7g3ma8bish3j" path="res://scripts/animated_button.gd" id="2_ekxnf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_l6cm7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ekxnf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bqqt6"]
+content_margin_top = 4.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wu84c"]
+
+[node name="MainMenu" type="Control" unique_id=1037538764]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_l6cm7")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=623562124]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1350173223]
+custom_minimum_size = Vector2(800, 1400)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Spacer" type="Control" parent="VBoxContainer" unique_id=1989325122]
+custom_minimum_size = Vector2(0, 1000)
+layout_mode = 2
+
+[node name="NewGameButton" type="Button" parent="VBoxContainer" unique_id=194235365]
+custom_minimum_size = Vector2(300, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.84313726, 0, 1)
+theme_override_colors/font_hover_color = Color(0.9999996, 0.92550826, 0.6867903, 1)
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxEmpty_l6cm7")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_ekxnf")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_bqqt6")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_wu84c")
+text = "New Game"
+script = ExtResource("2_ekxnf")
+
+[node name="Spacer2" type="Control" parent="VBoxContainer" unique_id=41117441]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="ContinueButton" type="Button" parent="VBoxContainer" unique_id=821220228]
+custom_minimum_size = Vector2(300, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.84313726, 0, 1)
+theme_override_colors/font_hover_color = Color(0.9999996, 0.92550826, 0.6867903, 1)
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxEmpty_l6cm7")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_ekxnf")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_bqqt6")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_wu84c")
+text = "Continue"
+script = ExtResource("2_ekxnf")
+
+[node name="Spacer3" type="Control" parent="VBoxContainer" unique_id=765527785]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="OptionsButton" type="Button" parent="VBoxContainer" unique_id=702484367]
+custom_minimum_size = Vector2(300, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.84313726, 0, 1)
+theme_override_colors/font_hover_color = Color(0.9999996, 0.92550826, 0.6867903, 1)
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxEmpty_l6cm7")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_ekxnf")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_bqqt6")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_wu84c")
+text = "Options"
+script = ExtResource("2_ekxnf")

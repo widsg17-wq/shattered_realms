@@ -11,8 +11,27 @@ config_version=5
 [application]
 
 config/name="shattered_realms"
+run/main_scene="uid://ch6gai00x0ov1"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+Global="*uid://bectx7nsd7bf3"
+
+[display]
+
+window/size/viewport_width=3840
+window/size/viewport_height=2160
+window/stretch/mode="canvas_items"
+
+[editor_plugins]
+
+enabled=PackedStringArray()
+
+[gui]
+
+theme/custom="uid://cuemb2mikoqt1"
 
 [physics]
 

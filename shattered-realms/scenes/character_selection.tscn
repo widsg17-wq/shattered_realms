@@ -1,0 +1,295 @@
+[gd_scene format=3 uid="uid://yl1wqimpp636"]
+
+[ext_resource type="Texture2D" uid="uid://c0pin34ywj55q" path="res://assets/ui/warrior_profile.png" id="1_81hqe"]
+[ext_resource type="Script" uid="uid://bwgx0kpyagxg2" path="res://scripts/character_selection.gd" id="1_sl7g1"]
+[ext_resource type="Texture2D" uid="uid://bbkq3e0i8okjy" path="res://assets/ui/ranger_profile.png" id="2_2qblp"]
+[ext_resource type="Texture2D" uid="uid://d3hem210k5ol8" path="res://assets/ui/wizard_profile.png" id="3_ex72q"]
+[ext_resource type="Script" uid="uid://7g3ma8bish3j" path="res://scripts/animated_button.gd" id="3_wh1ae"]
+[ext_resource type="Texture2D" uid="uid://cdkij05temj7o" path="res://assets/backgrounds/bg_apocalypse_integrated_ruins.png" id="5_2qblp"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gahpj"]
+bg_color = Color(0, 0, 0, 0.48235294)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.83137256, 0.6862745, 0.21568628, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gueu1"]
+bg_color = Color(0, 0, 0, 0.48235294)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.74596584, 0.7371688, 3.85046e-07, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2qblp"]
+bg_color = Color(0, 0, 0, 0.49803922)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_81hqe"]
+
+[sub_resource type="Gradient" id="Gradient_ci3hj"]
+offsets = PackedFloat32Array(0, 0.54891306, 1)
+colors = PackedColorArray(0, 0, 0, 0, 0.77898943, 0.67628324, 0.13097385, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_x0k4l"]
+gradient = SubResource("Gradient_ci3hj")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_mxb7q"]
+lifetime_randomness = 0.5
+particle_flag_disable_z = true
+emission_shape_scale = Vector3(1200, 7000, 1)
+emission_shape = 3
+emission_box_extents = Vector3(1, 1, 1)
+initial_velocity_min = 10.0
+initial_velocity_max = 30.0
+gravity = Vector3(0, 0, 0)
+scale_min = 3.0
+scale_max = 5.0
+color_ramp = SubResource("GradientTexture1D_x0k4l")
+turbulence_enabled = true
+
+[sub_resource type="Gradient" id="Gradient_kjwij"]
+offsets = PackedFloat32Array(0, 0.5597826, 1)
+colors = PackedColorArray(0, 0, 0, 0, 0.31089827, 0.7955134, 0.09929641, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_sxjpy"]
+gradient = SubResource("Gradient_kjwij")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_w7eue"]
+lifetime_randomness = 0.5
+particle_flag_disable_z = true
+emission_shape_scale = Vector3(1200, 7000, 1)
+emission_shape = 3
+emission_box_extents = Vector3(1, 1, 1)
+initial_velocity_min = 10.0
+initial_velocity_max = 30.0
+gravity = Vector3(0, 0, 0)
+scale_min = 3.0
+scale_max = 5.0
+color_ramp = SubResource("GradientTexture1D_sxjpy")
+turbulence_enabled = true
+
+[sub_resource type="Gradient" id="Gradient_ud5dw"]
+offsets = PackedFloat32Array(0, 0.5543478, 1)
+colors = PackedColorArray(0, 0, 0, 0, 0.7236571, 0.0028909254, 0.96534246, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_l5g1m"]
+gradient = SubResource("Gradient_ud5dw")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_oh2f5"]
+lifetime_randomness = 0.5
+particle_flag_disable_z = true
+emission_shape_scale = Vector3(1200, 7000, 1)
+emission_shape = 3
+emission_box_extents = Vector3(1, 1, 1)
+initial_velocity_min = 10.0
+initial_velocity_max = 30.0
+gravity = Vector3(0, 0, 0)
+scale_min = 3.0
+scale_max = 5.0
+color_ramp = SubResource("GradientTexture1D_l5g1m")
+turbulence_enabled = true
+
+[node name="CharacterSelectionScreen" type="Control" unique_id=1344862954]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_sl7g1")
+
+[node name="MainLayout" type="MarginContainer" parent="." unique_id=2087485883]
+z_index = 5
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Content" type="VBoxContainer" parent="MainLayout" unique_id=1399510026]
+layout_mode = 2
+alignment = 1
+
+[node name="TitleLabel" type="Label" parent="MainLayout/Content" unique_id=465289190]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.41568628)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 80
+text = "CHARACTER SELECTION"
+horizontal_alignment = 1
+
+[node name="Spacer" type="Control" parent="MainLayout/Content" unique_id=1717453658]
+custom_minimum_size = Vector2(0, 400)
+layout_mode = 2
+
+[node name="CardContainer" type="HBoxContainer" parent="MainLayout/Content" unique_id=2006955002]
+layout_mode = 2
+alignment = 1
+
+[node name="WarriorCard" type="VBoxContainer" parent="MainLayout/Content/CardContainer" unique_id=812576830]
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="Label" type="Label" parent="MainLayout/Content/CardContainer/WarriorCard" unique_id=1807094878]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0.83137256, 0.6862745, 0.21568628, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_font_sizes/font_size = 40
+text = "Warrior"
+horizontal_alignment = 1
+
+[node name="ProfileImage" type="TextureRect" parent="MainLayout/Content/CardContainer/WarriorCard" unique_id=1426952866]
+custom_minimum_size = Vector2(400, 480)
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("1_81hqe")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Button" type="Button" parent="MainLayout/Content/CardContainer/WarriorCard" unique_id=1834274343]
+custom_minimum_size = Vector2(400, 60)
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxFlat_gahpj")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gueu1")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_2qblp")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_81hqe")
+text = "Select"
+script = ExtResource("3_wh1ae")
+
+[node name="Spacer" type="Control" parent="MainLayout/Content/CardContainer" unique_id=933917014]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+
+[node name="RangerCard" type="VBoxContainer" parent="MainLayout/Content/CardContainer" unique_id=231407869]
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="Label" type="Label" parent="MainLayout/Content/CardContainer/RangerCard" unique_id=1909860162]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0.83137256, 0.6862745, 0.21568628, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_font_sizes/font_size = 40
+text = "Ranger"
+horizontal_alignment = 1
+
+[node name="ProfileImage" type="TextureRect" parent="MainLayout/Content/CardContainer/RangerCard" unique_id=2131420376]
+custom_minimum_size = Vector2(400, 480)
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("2_2qblp")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Button" type="Button" parent="MainLayout/Content/CardContainer/RangerCard" unique_id=70299803]
+custom_minimum_size = Vector2(400, 60)
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxFlat_gahpj")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gueu1")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_2qblp")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_81hqe")
+text = "Select"
+script = ExtResource("3_wh1ae")
+
+[node name="Spacer2" type="Control" parent="MainLayout/Content/CardContainer" unique_id=1680561460]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+
+[node name="WizardCard" type="VBoxContainer" parent="MainLayout/Content/CardContainer" unique_id=837404384]
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="Label" type="Label" parent="MainLayout/Content/CardContainer/WizardCard" unique_id=1317889906]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0.83137256, 0.6862745, 0.21568628, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_font_sizes/font_size = 40
+text = "Wizard"
+horizontal_alignment = 1
+
+[node name="ProfileImage" type="TextureRect" parent="MainLayout/Content/CardContainer/WizardCard" unique_id=2020714338]
+custom_minimum_size = Vector2(400, 480)
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("3_ex72q")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Button" type="Button" parent="MainLayout/Content/CardContainer/WizardCard" unique_id=843633761]
+custom_minimum_size = Vector2(400, 60)
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxFlat_gahpj")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gueu1")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_2qblp")
+text = "Select"
+script = ExtResource("3_wh1ae")
+
+[node name="Spacer2" type="Control" parent="MainLayout/Content" unique_id=656828246]
+custom_minimum_size = Vector2(0, 400)
+layout_mode = 2
+
+[node name="Background" type="TextureRect" parent="." unique_id=490422574]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("5_2qblp")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="GPUParticles2D2" type="GPUParticles2D" parent="Background" unique_id=1741642485]
+position = Vector2(1, 0)
+amount = 100
+lifetime = 2.5
+process_material = SubResource("ParticleProcessMaterial_mxb7q")
+
+[node name="GPUParticles2D3" type="GPUParticles2D" parent="Background" unique_id=1995780937]
+position = Vector2(1, 0)
+amount = 100
+lifetime = 2.5
+process_material = SubResource("ParticleProcessMaterial_w7eue")
+
+[node name="GPUParticles2D4" type="GPUParticles2D" parent="Background" unique_id=1574558756]
+position = Vector2(1, 0)
+amount = 100
+lifetime = 2.5
+process_material = SubResource("ParticleProcessMaterial_oh2f5")
+
+[node name="ClickSound" type="AudioStreamPlayer" parent="." unique_id=283376129]
